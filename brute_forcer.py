@@ -5,13 +5,14 @@ Possible_letters = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567
 password = "hel&a"
 time_start = time.perf_counter()
 print("Trying all combinations.....")
-for x in range(26):
+for x in range(51):
     #Using itertools product to continually change the rightmost index through the string of letters
     possible_passwords = (itertools.product(Possible_letters, repeat=x))
     # Go through each combo with a counter
     for g in possible_passwords:
         password_str = ""
         password_str = password_str.join(g)
+        print(password_str)
         # g is in a list format thus to check, its needed to change it to a string first
         if (password_str == password):
             time_end = time.perf_counter()
