@@ -6,15 +6,15 @@ import time
 #Brute forcing takes a long time so i will try to iterate through common word sin the dictionary and concatente letters and symbols after
 
 Possible_letters = ("1234567890-_.!@#$%^&*()+=")
-
 word_list = words.words()
 new = []
 query = []
 print("Please enter the first letter alphabets of the password to be guessed:")
+print("Enter 'done' to start cracking")
 
 while True:
     poss = input()
-    if (poss == ""):
+    if (poss == "done"):
         break
     else:
         query.append(poss)
@@ -24,7 +24,7 @@ for finder in word_list:
         if finder[0] == al: 
             new.append(finder)
 
-password = "maximus1234"
+password = "blood13#"
 string_combi = ""
 #236736
 print("Cracking.....")
